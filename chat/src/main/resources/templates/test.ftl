@@ -127,7 +127,7 @@
 	  <#include "footer.ftl">
 </div> <!-- /container -->
 <script>
-    alert('${jsValue}');
+    <#--alert('${jsValue}');-->
 '<#list userInfos as userInfo>'
     console.log('${userInfo.id}');
 '</#list>'

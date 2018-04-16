@@ -3,7 +3,7 @@ package tk.baseaccept.pass.chat.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.baseaccept.pass.chat.domain.UserInfo;
-import tk.baseaccept.pass.chat.mapper.UserMapper;
+import tk.baseaccept.pass.chat.mapper.UserInfoMapper;
 import tk.baseaccept.pass.chat.service.UserService;
 
 import java.util.List;
@@ -18,19 +18,21 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    private UserMapper userMapper;
+    private UserInfoMapper userInfoMapper;
+//    private UserMapper userMapper;
+
     @Override
     public UserInfo getUserInfoByUserId(int Id){
-        return  userMapper.findOne(Id);
+        return userInfoMapper.selectByPrimaryKey(Id);
 
     }
     @Override
     public List<UserInfo> findUsers(){
-        return userMapper.findAll();
+        return userInfoMapper.findAll();
     }
 
     @Override
     public UserInfo getUserByName(String name){
-        return userMapper.findOneByName(name);
+        return userInfoMapper.findOneByName(name);
     }
 }

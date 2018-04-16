@@ -1,79 +1,75 @@
 package tk.baseaccept.pass.chat.domain;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import org.apache.catalina.Role;
-
-import java.io.Serializable;
 import java.util.Date;
 
-public class UserInfo implements Serializable {
-	private static final long serialVersionUID = 6519997700281088880L;
-	private int id;
-	private String name;
+public class UserInfo {
+    private Integer id;
 
-	private String tel;
+    private String name;
 
-	private String password;
-	@JSONField(format="yyyy-MM-dd")
-	private Date createTime;
+    private String tel;
 
-	private String role;
+    private String password;
 
-	private String permission;
+    private String role;
 
-	public int getId() {
-		return id;
-	}
+    private String permission;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private Date createTime;
 
-	public String getName() {
-		return name;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public String getTel() {
-		return tel;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getTel() {
+        return tel;
+    }
 
-	public void setTel(String tel) {
-		this.tel = tel;
-	}
+    public void setTel(String tel) {
+        this.tel = tel == null ? null : tel.trim();
+    }
 
-	public Date getCreateTime() {
-		return createTime;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
 
-	public String getRole() {
-		return role;
-	}
+    public String getRole() {
+        return role;
+    }
 
-	public void setRole(String role) {
-		this.role = role;
-	}
+    public void setRole(String role) {
+        this.role = role == null ? null : role.trim();
+    }
 
-	public String getPermission() {
-		return permission;
-	}
+    public String getPermission() {
+        return permission;
+    }
 
-	public void setPermission(String permission) {
-		this.permission = permission;
-	}
+    public void setPermission(String permission) {
+        this.permission = permission == null ? null : permission.trim();
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 }
